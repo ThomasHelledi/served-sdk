@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Served.SDK</PackageId>
+    <Version>1.4.0</Version>
+    <Authors>Served, Thomas Helledi</Authors>
+    <Company>Served</Company>
+    <Product>Served SDK</Product>
+    <Description>Official .NET SDK for interacting with the Served API. Provides strongly-typed, module-based access to project management, time tracking, finance, DevOps, and more. Includes built-in tracing and observability with OpenTelemetry support.</Description>
+    <PackageTags>Served;SDK;API;Client;ProjectManagement;TimeTracking;DevOps;Tracing;OpenTelemetry;UnifiedHQ;Forge;Analytics</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/ThomasHelledi/served-sdk</RepositoryUrl>
+    <PackageProjectUrl>https://unifiedhq.ai</PackageProjectUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>v1.4.0: UnifiedHQ ecosystem integration. Updated all endpoints to apis.unifiedhq.ai. Enhanced Forge observability with analytics dashboard. GitHub Fork support for custom pipelines. See https://unifiedhq.ai/docs for full documentation.</PackageReleaseNotes>
+    <!-- Prevent duplicate assembly attributes when built inside ServedApp (which has Directory.Build.props) -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Playwright" Version="1.49.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="OpenTelemetry" Version="1.8.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.8.0" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
