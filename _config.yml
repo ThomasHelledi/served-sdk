@@ -1,0 +1,45 @@
+title: Served.SDK Documentation
+description: Official .NET SDK for the Served and UnifiedHQ platforms
+url: https://unifiedhq.github.io/served-sdk
+baseurl: ""
+
+# Theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+
+# Navigation
+nav:
+  - title: Getting Started
+    url: /docs/getting-started
+  - title: Authentication
+    url: /docs/authentication
+  - title: API Reference
+    url: /docs/api-reference/
+  - title: Examples
+    url: /docs/examples/basic-usage
+
+# Footer
+footer:
+  links:
+    - title: NuGet
+      url: https://www.nuget.org/packages/Served.SDK
+    - title: UnifiedHQ
+      url: https://unifiedhq.ai
+    - title: Discord
+      url: https://discord.gg/unifiedhq
